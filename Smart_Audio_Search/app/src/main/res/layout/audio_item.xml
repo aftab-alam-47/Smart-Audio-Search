@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_constraint"
+
+    >
+
+    <TextView
+        android:id="@+id/item_textview"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/textview_timeStamp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_textview"
+
+        />
+    <TextView
+        android:id="@+id/textview_count"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/textview_timeStamp"
+        app:layout_constraintTop_toBottomOf="@+id/item_textview"
+        app:layout_constraintRight_toLeftOf="@id/equalizer_anim"
+
+        />
+
+    <es.claucookie.miniequalizerlibrary.EqualizerView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/equalizer_anim"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        custom:foregroundColor="@color/cherry_red"
+        android:visibility="invisible"
+        custom:animDuration="3500"
+        custom:layout_constraintLeft_toRightOf="@id/item_textview"
+        custom:layout_constraintRight_toRightOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
